@@ -9,18 +9,43 @@
       "style": "emphasis",
       "items": [
         {
-          "type": "TextBlock",
-          "text": "Teams Msg Header",
-          "weight": "Bolder",
-          "size": "Large",
-          "wrap": true
-        },
-        {
-          "type": "TextBlock",
-          "text": "Script Name",
-          "spacing": "None",
-          "isSubtle": true,
-          "wrap": true
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "width": "auto",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "${STATUS_ICON}",
+                  "size": "Large",
+                  "wrap": true
+                }
+              ],
+              "verticalContentAlignment": "Center"
+            },
+            {
+              "type": "Column",
+              "width": "stretch",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "${Header}",
+                  "weight": "Bolder",
+                  "size": "Large",
+                  "wrap": true
+                },
+                {
+                  "type": "TextBlock",
+                  "text": "${ServerName} | ${ScriptName}",
+                  "spacing": "None",
+                  "isSubtle": true,
+                  "wrap": true
+                }
+              ],
+              "verticalContentAlignment": "Center"
+            }
+          ]
         }
       ]
     },
@@ -29,7 +54,7 @@
       "items": [
         {
           "type": "TextBlock",
-          "text": "Script Execution Summary",
+          "text": "${DATE}",
           "weight": "Bolder",
           "size": "Medium",
           "wrap": true,
@@ -37,229 +62,20 @@
         },
         {
           "type": "TextBlock",
-          "text": "The following table shows the status of scheduled script executions across servers. Please review the status and take action if needed.",
+          "text": "${Summary}",
           "wrap": true,
           "spacing": "Small"
         }
       ]
     },
     {
-      "type": "Container",
-      "spacing": "Medium",
-      "items": [
-        {
-          "type": "ColumnSet",
-          "style": "emphasis",
-          "columns": [
-            {
-              "type": "Column",
-              "width": "1",
-              "items": [
-                {
-                  "type": "TextBlock",
-                  "text": "Date",
-                  "weight": "Bolder",
-                  "wrap": true
-                }
-              ]
-            },
-            {
-              "type": "Column",
-              "width": "1",
-              "items": [
-                {
-                  "type": "TextBlock",
-                  "text": "Server",
-                  "weight": "Bolder",
-                  "wrap": true
-                }
-              ]
-            },
-            {
-              "type": "Column",
-              "width": "1",
-              "items": [
-                {
-                  "type": "TextBlock",
-                  "text": "Script Name",
-                  "weight": "Bolder",
-                  "wrap": true
-                }
-              ]
-            },
-            {
-              "type": "Column",
-              "width": "1",
-              "items": [
-                {
-                  "type": "TextBlock",
-                  "text": "Status",
-                  "weight": "Bolder",
-                  "wrap": true
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "ColumnSet",
-          "columns": [
-            {
-              "type": "Column",
-              "width": "1",
-              "items": [
-                {
-                  "type": "TextBlock",
-                  "text": "2026-01-12",
-                  "wrap": true
-                }
-              ]
-            },
-            {
-              "type": "Column",
-              "width": "1",
-              "items": [
-                {
-                  "type": "TextBlock",
-                  "text": "PROD-WEB-01",
-                  "wrap": true
-                }
-              ]
-            },
-            {
-              "type": "Column",
-              "width": "1",
-              "items": [
-                {
-                  "type": "TextBlock",
-                  "text": "Backup.ps1",
-                  "wrap": true
-                }
-              ]
-            },
-            {
-              "type": "Column",
-              "width": "1",
-              "items": [
-                {
-                  "type": "TextBlock",
-                  "text": "✅ Success",
-                  "wrap": true,
-                  "color": "Good"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "ColumnSet",
-          "columns": [
-            {
-              "type": "Column",
-              "width": "1",
-              "items": [
-                {
-                  "type": "TextBlock",
-                  "text": "2026-01-12",
-                  "wrap": true
-                }
-              ]
-            },
-            {
-              "type": "Column",
-              "width": "1",
-              "items": [
-                {
-                  "type": "TextBlock",
-                  "text": "PROD-DB-01",
-                  "wrap": true
-                }
-              ]
-            },
-            {
-              "type": "Column",
-              "width": "1",
-              "items": [
-                {
-                  "type": "TextBlock",
-                  "text": "Cleanup.ps1",
-                  "wrap": true
-                }
-              ]
-            },
-            {
-              "type": "Column",
-              "width": "1",
-              "items": [
-                {
-                  "type": "TextBlock",
-                  "text": "❌ Failed",
-                  "wrap": true,
-                  "color": "Attention"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "ColumnSet",
-          "columns": [
-            {
-              "type": "Column",
-              "width": "1",
-              "items": [
-                {
-                  "type": "TextBlock",
-                  "text": "2026-01-12",
-                  "wrap": true
-                }
-              ]
-            },
-            {
-              "type": "Column",
-              "width": "1",
-              "items": [
-                {
-                  "type": "TextBlock",
-                  "text": "PROD-APP-01",
-                  "wrap": true
-                }
-              ]
-            },
-            {
-              "type": "Column",
-              "width": "1",
-              "items": [
-                {
-                  "type": "TextBlock",
-                  "text": "Deploy.ps1",
-                  "wrap": true
-                }
-              ]
-            },
-            {
-              "type": "Column",
-              "width": "1",
-              "items": [
-                {
-                  "type": "TextBlock",
-                  "text": "⏳ Running",
-                  "wrap": true,
-                  "color": "Warning"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
       "type": "ActionSet",
+      "$when": "${SHOW_BUTTON}",
       "actions": [
         {
           "type": "Action.OpenUrl",
           "title": "Open Folder",
-          "url": "https://chatgpt.com/"
+          "url": "${ButtonUrl}"
         }
       ]
     }
