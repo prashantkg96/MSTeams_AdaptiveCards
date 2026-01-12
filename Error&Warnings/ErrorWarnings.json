@@ -59,14 +59,20 @@
           "size": "Medium",
           "wrap": true,
           "spacing": "Medium"
-        },
+        }
+      ],
+      "separator": true
+    },
+    {
+      "type": "Container",
+      "items": [
         {
           "type": "TextBlock",
           "text": "${Summary}",
-          "wrap": true,
-          "spacing": "Small"
+          "wrap": true
         }
-      ]
+      ],
+      "separator": true
     },
     {
       "type": "ActionSet",
