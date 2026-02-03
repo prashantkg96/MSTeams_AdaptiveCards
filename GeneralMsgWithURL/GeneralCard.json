@@ -3,10 +3,13 @@
   "speak": "Teams Message Notification",
   "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
   "version": "1.5",
+  "msteams": {
+    "width": "Full"
+  },
   "body": [
     {
       "type": "Container",
-      "style": "emphasis",
+      "style": "${STYLE}",
       "items": [
         {
           "type": "ColumnSet",
